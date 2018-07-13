@@ -1,0 +1,22 @@
+version: '3'
+networks:
+  netrails:
+    driver: bridge
+services:
+  db:
+    image: postgres
+    networks:
+      - netrails
+    ports:
+      - '5432:5432'
+  web:
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    depends_on:
+      - db
+    networks:
+      - netrails
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/app
