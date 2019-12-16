@@ -3,10 +3,6 @@ docker-compose run web rails new . --api --force --database=postgresql
 ```
 
 ```
-docker-compose build
-```
-
-```
 default: &default
   adapter: postgresql
   encoding: unicode
@@ -26,9 +22,9 @@ test:
 ```
 
 ```
-docker-compose up
+docker-compose up --build
 ```
 
 ```
-docker-compose run web rake db:create
+docker-compose exec web rails db:create
 ```
