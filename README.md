@@ -29,7 +29,7 @@ default: &default
 docker-compose up --build
 ```
 
-## How to create database
+## How to create the database
 ```
 docker-compose exec web rails db:create
 ```
