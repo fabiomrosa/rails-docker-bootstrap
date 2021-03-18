@@ -1,11 +1,11 @@
 # Rails Docker Bootstrap
 
-## How to build rails application with postgres
+## Rails Application
 ```
 docker-compose run web rails new . --force --database=postgresql
 ```
 
-## How to build rails api with postgres
+## Rails Api
 ```
 docker-compose run web rails new . --api --force --database=postgresql
 ```
