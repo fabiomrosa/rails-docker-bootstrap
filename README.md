@@ -10,7 +10,7 @@ docker-compose run web rails new . --force --database=postgresql
 docker-compose run web rails new . --api --force --database=postgresql
 ```
 
-### Add database configuration
+#### Add database configuration into `/config/database.yml`
 ```
 default: &default
   adapter: postgresql
