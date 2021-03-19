@@ -36,5 +36,5 @@ docker-compose up --build
 
 ## Creating the database
 ```
-docker-compose exec web rails db:create
+docker-compose exec app rails db:create
 ```
