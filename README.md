@@ -1,7 +1,7 @@
 # Rails Docker Bootstrap
 
 ## Getting Started
-After cloning this repo into your workspace, copy and paste `.env.example` renaming the file to `.env`
+After cloning this repo into your workspace, duplicate `.env.example` renaming the file to `.env`
 
 ## Generating Rails App
 
