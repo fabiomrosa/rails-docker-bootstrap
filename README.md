@@ -15,7 +15,7 @@ docker-compose run --no-deps app rails new . --force --database=postgresql
 docker-compose run --no-deps app rails new . --api --force --database=postgresql
 ```
 
-#### Replace the contents of `config/database.yml` with the following:
+### Replace the contents of `config/database.yml` with the following:
 ```
 default: &default
   adapter: postgresql
