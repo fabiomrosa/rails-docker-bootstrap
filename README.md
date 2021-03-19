@@ -2,12 +2,12 @@
 
 ## Rails Application
 ```
-docker-compose run web rails new . --force --database=postgresql
+docker-compose run --no-deps app rails new . --force --database=postgresql
 ```
 
 ## Rails Api
 ```
-docker-compose run web rails new . --api --force --database=postgresql
+docker-compose run --no-deps app rails new . --api --force --database=postgresql
 ```
 
 #### Add database configuration into: `/config/database.yml`
