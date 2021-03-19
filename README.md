@@ -1,11 +1,16 @@
 # Rails Docker Bootstrap
 
-## Rails Application
+## Getting Started
+After cloning this repo into your workspace, copy and paste `.env.example` renaming the file to `.env`
+
+## Generating Rails App
+
+### Rails App
 ```
 docker-compose run --no-deps app rails new . --force --database=postgresql
 ```
 
-## Rails Api
+### Rails Api
 ```
 docker-compose run --no-deps app rails new . --api --force --database=postgresql
 ```
@@ -24,12 +29,12 @@ default: &default
   timeout: 5000
 ```
 
-## How to build and run the application
+## Building and running the application
 ```
 docker-compose up --build
 ```
 
-## How to create the database
+## Creating the database
 ```
 docker-compose exec web rails db:create
 ```
