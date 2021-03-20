@@ -38,3 +38,25 @@ docker-compose up --build
 ```
 docker-compose exec app rails db:create
 ```
+
+## Useful commands
+
+Rails console
+```
+docker-compose exec app rails console
+```
+
+Rails dbconsole
+```
+docker-compose exec app rails dbconsole
+```
+
+Rails generate
+```
+docker-compose exec app rails generate
+```
+
+Rails migrate
+```
+docker-compose exec app rails db:migrate
+```
