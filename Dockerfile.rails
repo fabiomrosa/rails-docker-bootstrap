@@ -1,7 +1,7 @@
 FROM ruby:2.7.2
 
 # Node v13
-RUN curl -sL https://deb.nodesource.com/setup_13.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
 
 # Checks Yarn integrity
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
