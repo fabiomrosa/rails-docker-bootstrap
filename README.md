@@ -29,6 +29,11 @@ default: &default
   timeout: 5000
 ```
 
+### Replace the contents of `config/environments/development.rb` with the following, to allow files updating using Docker:
+```
+config.file_watcher = ActiveSupport::FileUpdateChecker
+```
+
 ## Building and running the application
 ```
 docker-compose up --build
