@@ -32,6 +32,7 @@ default: &default
 ### Add with the following code into `config/environments/development.rb`:
 ```
 config.action_mailer.delivery_method = :smtp
+
 config.action_mailer.smtp_settings = {
   :address => ENV['MAILER_ADDRESS'],
   :port => ENV['MAILER_PORT'],
