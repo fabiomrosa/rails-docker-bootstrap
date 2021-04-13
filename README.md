@@ -31,6 +31,11 @@ default: &default
 
 ### Replace the contents of `config/environments/development.rb` with the following, to allow files updating using Docker:
 ```
+config.action_mailer.smtp_settings = {
+  :address => ENV['MAILER_ADDRESS'],
+  :port => ENV['MAILER_PORT'],
+}
+...
 config.file_watcher = ActiveSupport::FileUpdateChecker
 ```
 
