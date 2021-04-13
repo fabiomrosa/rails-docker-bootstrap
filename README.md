@@ -29,13 +29,21 @@ default: &default
   timeout: 5000
 ```
 
-### Replace the contents of `config/environments/development.rb` with the following, to allow files updating using Docker:
+### Add with the following code into `config/environments/development.rb`:
 ```
+config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = {
   :address => ENV['MAILER_ADDRESS'],
   :port => ENV['MAILER_PORT'],
+  :user_name => ENV['MAILER_USER'],
+  :password => ENV['MAILER_PASSWORD'],
+  :authentication => :plain,
+  :enable_starttls_auto => true,
 }
-...
+```
+
+### Replace the contents of `config/environments/development.rb` with the following, to allow files updating using Docker:
+```
 config.file_watcher = ActiveSupport::FileUpdateChecker
 ```
 
